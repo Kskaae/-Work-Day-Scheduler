@@ -1,25 +1,31 @@
 //GIVEN I am using a daily planner to create a schedule
-const day
-const date
-const time
-const saveTheInformation
+const  today  = new Date();
+const day = today.getDay();
+const dayList =  ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+console.log("today is:"+dayList[day]+".");
+const hour = today.getHours();
+const minute = today.getMinutes();
+const second = today.getSeconds();
 const dailySchedule = {
-    "8 AM": "",
-    "9 AM": "",
-    "10 AM": "",
-    "11 AM": "",
-    "12 PM": "",
-    "1 PM": "",
-    "2 PM": "",
-    "3 PM": "",
-    "4 PM": "",
-    "5 PM": "",
+    "time8": "",
+    "time9": "",
+    "time10": "",
+    "time11": "",
+    "time12": "",
+    "time1": "",
+    "time2": "",
+    "time3": "",
+    "time4": "",
+    "time5": "",
 };
-//$().grab workday information 
-    
+//$(function)(dailySchedule/information); {
+
+};
+
 //WHEN I open the planner
 //THEN the current day is displayed at the top of the calendar
 let dayDisp = currentDay
+$()
 //WHEN I scroll down
 function scroll()
 //THEN I am presented with timeblocks for standard business hours
