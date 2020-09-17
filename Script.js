@@ -12,7 +12,7 @@ const dailySchedule = {
     "time16": "",
     "time17": "",
 };
-
+console.log(dailySchedule)
 //WHEN I open the planner
 //THEN the current day is displayed at the top of the calendar
 console.log(moment().format('MMM Do YY'))
@@ -27,46 +27,60 @@ if (moment().format("HH") == $(eightAMtext).attr("data-time"))
 else if (moment().format("HH") > $(eightAMtext).attr("data-time"))
     $(eightAMtext).css("backgroundColor", "red");
 {
-    // if (this.moment === "past") {
-    //   this.style.color = "black";
-    // }
-    // else if (this.moment === "present") {
-    //   this.style.color = "red";
-    //}
+    if (moment().format("HH") == $(nineAMtext).attr("data-time"))
+        $(nineAmElement).css("backgroundColor", "lightgray");
+    else if (moment().format("HH") > $(nineAMtext).attr("data-time"))
+        $(nineAMtext).css("backgroundColor", "red");
+    {
+        // if (this.moment === "past") {
+        //   this.style.color = "black";
+        // }
+        // else if (this.moment === "present") {
+        //   this.style.color = "red";
+        //}
+        //else (this.moment === "Future") 
     //else (this.moment === "Future") 
-    //  this.style.color = "green";
-    //}
-    //});
+        //else (this.moment === "Future") 
+        //  this.style.color = "green";
+        //}
+        //});
 
 
-    //We need to create 9 conditionals for every hour that compare the current hour to a timblocks hour selected from the HTML
+        //We need to create 9 conditionals for every hour that compare the current hour to a timblocks hour selected from the HTML
+        //if time has passed , the timeblock will change to black color. If the time is current, the 
     //if time has passed , the timeblock will change to black color. If the time is current, the 
+        //if time has passed , the timeblock will change to black color. If the time is current, the 
+        //program will the timeblock will change to a red color. if a future time ,the timeblock will change to a green color 
     //program will the timeblock will change to a red color. if a future time ,the timeblock will change to a green color 
-    // getElementById "time8"
+        //program will the timeblock will change to a red color. if a future time ,the timeblock will change to a green color 
+        // getElementById "time8"
 
-    //WHEN I click into a timeblock,add on click function:
-    $("button").on("click", function () {
-        value = $(this).siblings("textarea").val();
-        hourString = $(this).siblings("div").text();
-        saveSchedule(hourString, value);
-        //THEN I can enter an event
-
-        let dailyScheduleArray = dailySchedule
-        //WHEN I click the save button for that timeblock
-        //THEN the text for that event is saved in local storage
-        localStorage.setItem("time8", JSON.stringify(eightAMtext));
-        localStorage.setItem("time9", JSON.stringify(nineAMtext));
-        localStorage.setItem("time10", JSON.stringify(tenAMtext));
-        localStorage.setItem("time11", JSON.stringify(elevenAMtext));
-        localStorage.setItem("time12", JSON.stringify(twelvePMtext));
-        localStorage.setItem("time13", JSON.stringify(onePMtext));
-        localStorage.setItem("time14", JSON.stringify(twoPMtext));
-        localStorage.setItem("time15", JSON.stringify(threePMtext));
-        localStorage.setItem("time16", JSON.stringify(fourPMtext));
-        localStorage.setItem("time17", JSON.stringify(fivePMtext));
-    });
-    // Retrieve
-    document.getElementById("result").innerHTML = localStorage.getItem("textarea");
+        //WHEN I click into a timeblock,add on click function:
+        $("button").on("click", function () {
+            value = $(this).siblings("textarea").val();
+            hourString = $(this).siblings("div").text();
+            saveSchedule(hourString, value);{
+            }
+            //THEN I can enter an event
+            // Shedule Event
+            //WHEN I click the save button for that timeblock
+            //$(document).ready(function){
+                $(".#btnSave").on("click", function () {
+                    Event.preventDefault();
+                    //THEN the text for that event is saved in local storage
+                    localStorage.setItem("time8", JSON.stringify(eightAMtext));
+                    localStorage.setItem("time9", JSON.stringify(nineAMtext));
+                    localStorage.setItem("time10", JSON.stringify(tenAMtext));
+                    localStorage.setItem("time11", JSON.stringify(elevenAMtext));
+                    localStorage.setItem("time12", JSON.stringify(twelvePMtext));
+                    localStorage.setItem("time13", JSON.stringify(onePMtext));
+                    localStorage.setItem("time14", JSON.stringify(twoPMtext));
+                    localStorage.setItem("time15", JSON.stringify(threePMtext));
+                    localStorage.setItem("time16", JSON.stringify(fourPMtext));
+                    localStorage.setItem("time17", JSON.stringify(fivePMtext));
+                });
+                // Retrieve
+                document.getElementById("result").innerHTML = localStorage.getItem("textarea");
 //add 9 event listers for each save button to store information
 //document.getElementById("8AMbtn").addEventListener("click", function () {
     //let eightAMtext = document.getElementById("8AMtext").value
