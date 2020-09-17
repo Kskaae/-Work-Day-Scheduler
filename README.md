@@ -2,19 +2,10 @@
 
 Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+My goals included:
+ Creating a functional Work Day Scheduler
+ using JavaScrip, Jquery, HTML, and CSS.  I attempted to design the code with the following acceptance criteria:
 
-## User Story
-
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
-
-```
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
@@ -28,19 +19,14 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
-```
 
-The following animation demonstrates the application functionality:
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
 
-## Review
+This project was also exceptionally difficult for me using JavaScript and JQuery. I understand the concepts during class and when I see something it makes sense however, doing it on my own is far more challenging. I got lost several times and used google as a reference but it was of little help. I also used  youtube and a tutor session to try and make this project functional. I specifically had issues with the local storage and color-coding requirements. 
 
-You are required to submit the following for review:
+Special thanks to :
+Anthony Demott -TA 
+David Lovett 
+Brandon Burrus -TA
+John Hernandez -Tutor
 
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
